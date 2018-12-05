@@ -12,6 +12,7 @@ var eifel65 = 163
 var communism = 16
 let gestart = false;
 //var audio1 = new Audio('failed.mp3');
+//var audio2 = new Audio('.mp3');
 
 var hard
 var medium
@@ -88,6 +89,7 @@ function SubmitAwnser(){
   console.log(antw)
   if (antw == aantalBobs){
     alert(aantalBobs + " was the correct awnser!" + "\n" + "Yay");
+//    audio2.play();
   }
   else {
     alert(antw + " was incorrect, the correct awnser was " + aantalBobs);
@@ -123,6 +125,6 @@ function draw(){
 function xxx(){
   var secondaries = document.getElementsByClassName("secondary")
   for (var p = 0; p<secondaries.length; p++){
-    secondaries[p].style.visibility = "hidden"
+    secondaries[p].style.visibility = "visible"
   }
 }
