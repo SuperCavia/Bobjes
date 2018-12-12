@@ -3,42 +3,41 @@ var radius = 10;
 var eyeSize = 24;
 var xSize = 600;
 var ySize = 600;
-var xSpeedjes = []
-var ySpeedjes = []
-var xBobjes = []
-var yBobjes = []
-var aantalBobs = 0
-var eifel65 = 163
-var communism = 16
-let gestart = false;
+var xSpeedjes = [];
+var ySpeedjes = [];
+var xBobjes = [];
+var yBobjes = [];
+var aantalBobs = 0;
+var eifel65 = 163;
+var communism = 16;
+var gestart = false;
 var audio1 = new Audio('failed.mp3');
-var audio2 = new Audio('won.mp3')
-var secondaries = []
-
-var hard
-var medium
-var easy
+var audio2 = new Audio('won.mp3');
+var secondaries = [];
+var hard;
+var medium;
+var easy;
 
 function Hardmode() {
   hard = Math.floor(random(8,16));
-  aantalBobs = hard
-  console.log(aantalBobs)
-  xxx()
+  aantalBobs = hard;
+  console.log(aantalBobs);
+  xxx();
 }
 function Easymode() {
   easy = Math.floor(random(1,6));
-  aantalBobs = easy
-  console.log(aantalBobs)
-  xxx()
+  aantalBobs = easy;
+  console.log(aantalBobs);
+  xxx();
 }
 function Mediummode() {
   medium = Math.floor(random(7,10));
   if (medium == hard) {
-    medium = medium + 1
+    medium = medium + 1;
   }
-  aantalBobs = medium
-  console.log(aantalBobs)
-  xxx()
+  aantalBobs = medium;
+  console.log(aantalBobs);
+  xxx();
 }
 function maakBobjes () {
   gestart = true;
@@ -49,19 +48,19 @@ function maakBobjes () {
   //console.log(hard)
 //  aantalBobs = hard
   if (medium == hard) {
-    medium = medium + 1
+    medium = medium + 1;
   }
   createCanvas(xSize, ySize);
   background(51, 0, 0);
-  console.log(aantalBobs)
+  console.log(aantalBobs);
   for (var i = 0; i < aantalBobs; i++) {
-    xBobjes.push(50)
-    yBobjes.push(100)
-    var r1 = random(-5, 5)
-    var r2 = random(-5, 5)
-    xSpeedjes.push(r1)
-    ySpeedjes.push(r2)
-    setTimeout(evil, 10000)
+    xBobjes.push(50);
+    yBobjes.push(100);
+    var r1 = random(-5, 5);
+    var r2 = random(-5, 5);
+    xSpeedjes.push(r1);
+    ySpeedjes.push(r2);
+    setTimeout(evil, 10000);
   }
 }
 function evil(){
@@ -87,24 +86,26 @@ function tekenBob (x, y) {
 }
 function SubmitAnswer(){
   var antw = int(document.getElementById("answer").value);
-  console.log(antw)
+  console.log(antw);
   if (antw == aantalBobs){
     audio2.play();
     alert(aantalBobs + " was the correct answer!" + "\n" + "Yay");
+    setTimeout(restart, 1000);
   }
   else {
     audio1.play();
     alert(antw + " was incorrect, the correct answer was " + aantalBobs);
+    setTimeout(restart, 1000);
   }
 }
 function draw(){
   if (gestart) {
     if (medium == hard) {
-      medium = medium + 1
+      medium = medium + 1;
     }
     background(255);
   	for (var i = 0; i < aantalBobs + 1; i++) {
-      tekenBob(xBobjes[i], yBobjes[i])
+      tekenBob(xBobjes[i], yBobjes[i]);
   		if (xBobjes[i] > xSize - 100 || xBobjes[i] < radius){
   			xSpeedjes[i] = -xSpeedjes[i];
         if (aantalBobs == hard) {
@@ -120,12 +121,14 @@ function draw(){
   		xBobjes[i] += xSpeedjes[i];
   		yBobjes[i] += ySpeedjes[i];
     }
-//    console.log(easy)
 }
 }
 function xxx(){
    var secondaries = document.getElementsByClassName("secondary")
    for (var p = 0; p<secondaries.length; p++){
-     secondaries[p].style.visibility = "visible"
+     secondaries[p].style.visibility = "visible";
    }
+}
+function restart(){
+  location.reload();
 }
