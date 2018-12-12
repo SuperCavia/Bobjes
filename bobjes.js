@@ -121,6 +121,11 @@ function draw(){
 }
 }
 function xxx(){
+   var secondaries = document.getElementsByClassName("secondary")
+   for (var p = 0; p<secondaries.length; p++){
+     secondaries[p].style.visibility = "visible"
+   }
+//function xxx(){
 //  document.getElementsByClassName("secondary").style.visibility = "hidden"
   console.log("test")
 }
