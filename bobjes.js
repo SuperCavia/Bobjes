@@ -128,11 +128,3 @@ function xxx(){
    for (var p = 0; p<secondaries.length; p++){
      secondaries[p].style.visibility = "visible"
    }
-//function xxx(){
-//  document.getElementsByClassName("secondary").style.visibility = "hidden"
-//  console.log("test")
-//}
-//function leeg(){
-//  document.getElementById("awnser").value = ""
-//}
-//Bovenliggende functie was een poging om de waarde van de imput te clearen zodra je erop klikt maar lukt niet (value cannot be null)
