@@ -20,12 +20,18 @@ var medium;
 var easy;
 
 function Hardmode() {
+  document.getElementById("h").classList.add("selected");
+  document.getElementById("e").classList.remove("selected");
+  document.getElementById("m").classList.remove("selected");
   hard = Math.floor(random(8,16));
   aantalBobs = hard;
   console.log(aantalBobs);
   xxx();
 }
 function Easymode() {
+  document.getElementById("e").classList.add("selected");
+  document.getElementById("h").classList.remove("selected");
+  document.getElementById("m").classList.remove("selected");
   easy = Math.floor(random(1,6));
   aantalBobs = easy;
   console.log(aantalBobs);
@@ -33,6 +39,9 @@ function Easymode() {
 }
 function Mediummode() {
   medium = Math.floor(random(7,10));
+  document.getElementById("m").classList.add("selected");
+  document.getElementById("e").classList.remove("selected");
+  document.getElementById("h").classList.remove("selected");
   if (medium == hard) {
     medium = medium + 1;
   }
