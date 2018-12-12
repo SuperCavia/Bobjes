@@ -23,11 +23,13 @@ function Hardmode() {
   hard = Math.floor(random(8,16));
   aantalBobs = hard
   console.log(aantalBobs)
+  xxx()
 }
 function Easymode() {
   easy = Math.floor(random(1,6));
   aantalBobs = easy
   console.log(aantalBobs)
+  xxx()
 }
 function Mediummode() {
   medium = Math.floor(random(7,10));
@@ -36,6 +38,7 @@ function Mediummode() {
   }
   aantalBobs = medium
   console.log(aantalBobs)
+  xxx()
 }
 function maakBobjes () {
   gestart = true;
