@@ -1,4 +1,4 @@
-// wip do not touch, all credit goes to Jacco Baauw
+// wip do not touch, all credit goes to SuperCavia
 var radius = 10;
 var eyeSize = 24;
 var xSize = 600;
@@ -51,12 +51,6 @@ function Mediummode() {
 }
 function maakBobjes () {
   gestart = true;
-//  easy = Math.floor(random(1,6));
-//  medium = Math.floor(random(7,10));
-//  hard = Math.floor(random(8,16));
-  //console.log(medium)
-  //console.log(hard)
-//  aantalBobs = hard
   if (medium == hard) {
     medium = medium + 1;
   }
@@ -76,11 +70,6 @@ function maakBobjes () {
 }
 function evil(){
   createCanvas(0, 0);
-}
-function setup(){
-//  createCanvas(xSize, ySize);
-//	maakBobjes();			//dit komt uiteindelijk in een onclick functie
-  //die onclick fucntie maakt de bobjes en beslist jouw diffculty
 }
 function tekenBob (x, y) {
     noStroke();
