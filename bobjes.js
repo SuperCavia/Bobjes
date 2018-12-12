@@ -14,6 +14,7 @@ var gestart = false;
 var audio1 = new Audio('failed.mp3');
 var audio2 = new Audio('won.mp3');
 var secondaries = [];
+var tertiaries = [];
 var hard;
 var medium;
 var easy;
@@ -127,6 +128,12 @@ function xxx(){
    var secondaries = document.getElementsByClassName("secondary")
    for (var p = 0; p<secondaries.length; p++){
      secondaries[p].style.visibility = "visible";
+   }
+}
+function yyy(){
+   var tertiaries = document.getElementsByClassName("tertiary")
+   for (var j = 0; j<tertiaries.length; j++){
+     tertiaries[j].style.visibility = "visible";
    }
 }
 function restart(){
