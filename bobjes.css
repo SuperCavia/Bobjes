@@ -4,3 +4,6 @@
 .tertiary{
   visibility: hidden;
 }
+.selected{
+  background: green;
+}
