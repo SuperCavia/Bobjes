@@ -2,6 +2,7 @@
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
   <script src="bobjes.js"></script>
+  <link rel="stylesheet" href="bobjes.css">
 </head>
 <body>
   <p>
@@ -9,7 +10,7 @@
     <br>
     You'll have 10 seconds to count the creatures known as "Bobjes".
     <br>
-    At any time when you feel like you know the awnser, fill it in and submit.
+    At any time when you feel like you know the answer, fill it in and submit.
     <br>
     Good luck!
   </p>
@@ -17,9 +18,11 @@
   <button onclick="Easymode()">Easy</button>
   <button onclick="Mediummode()">Medium</button>
   <button onclick="Hardmode()">Hard</button>
+<!--  <button onclick="xxx()">xxx</button>
+dat was een mislukte test voor een gestroomlijnde versie -->
   <br>
   <button class="secondary" onclick="maakBobjes()">Challange accepted!</button>
   <br>
-  <input class="secondary" type="text" name="firstname" value="Insert awnser" id="awnser">
-  <button class="secondary" onclick="SubmitAwnser()">Submit Awnser</button>
+  <input class="secondary" type="text" name="firstname" value="Insert answer" id="answer">
+  <button class="secondary" onclick="SubmitAnswer()">Submit Answer</button>
 </body>

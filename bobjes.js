@@ -11,8 +11,9 @@ var aantalBobs = 0
 var eifel65 = 163
 var communism = 16
 let gestart = false;
-//var audio1 = new Audio('failed.mp3');
-//var audio2 = new Audio('.mp3');
+var audio1 = new Audio('failed.mp3');
+var audio2 = new Audio('won.mp3')
+var secondaries = []
 
 var hard
 var medium
@@ -22,13 +23,11 @@ function Hardmode() {
   hard = Math.floor(random(8,16));
   aantalBobs = hard
   console.log(aantalBobs)
-  xxx()
 }
 function Easymode() {
   easy = Math.floor(random(1,6));
   aantalBobs = easy
   console.log(aantalBobs)
-  xxx()
 }
 function Mediummode() {
   medium = Math.floor(random(7,10));
@@ -37,7 +36,6 @@ function Mediummode() {
   }
   aantalBobs = medium
   console.log(aantalBobs)
-  xxx()
 }
 function maakBobjes () {
   gestart = true;
@@ -84,16 +82,16 @@ function tekenBob (x, y) {
     stroke(1);
     line(x + 5, y + 40 + eyeSize/2, x + 90, y + 40 + eyeSize/2);
 }
-function SubmitAwnser(){
-  var antw = int(document.getElementById("awnser").value);
+function SubmitAnswer(){
+  var antw = int(document.getElementById("answer").value);
   console.log(antw)
   if (antw == aantalBobs){
-    alert(aantalBobs + " was the correct awnser!" + "\n" + "Yay");
-//    audio2.play();
+    audio2.play();
+    alert(aantalBobs + " was the correct answer!" + "\n" + "Yay");
   }
   else {
-    alert(antw + " was incorrect, the correct awnser was " + aantalBobs);
-//    audio1.play();
+    audio1.play();
+    alert(antw + " was incorrect, the correct answer was " + aantalBobs);
   }
 }
 function draw(){
@@ -123,8 +121,10 @@ function draw(){
 }
 }
 function xxx(){
-  var secondaries = document.getElementsByClassName("secondary")
-  for (var p = 0; p<secondaries.length; p++){
-    secondaries[p].style.visibility = "visible"
-  }
+//  document.getElementsByClassName("secondary").style.visibility = "hidden"
+  console.log("test")
 }
+//function leeg(){
+//  document.getElementById("awnser").value = ""
+//}
+//Bovenliggende functie was een poging om de waarde van de imput te clearen zodra je erop klikt maar lukt niet (value cannot be null)
