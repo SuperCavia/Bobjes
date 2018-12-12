@@ -127,8 +127,8 @@ function xxx(){
    }
 //function xxx(){
 //  document.getElementsByClassName("secondary").style.visibility = "hidden"
-  console.log("test")
-}
+//  console.log("test")
+//}
 //function leeg(){
 //  document.getElementById("awnser").value = ""
 //}
