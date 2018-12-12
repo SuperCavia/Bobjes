@@ -72,6 +72,7 @@ function maakBobjes () {
     ySpeedjes.push(r2);
     setTimeout(evil, 10000);
   }
+  yyy()
 }
 function evil(){
   createCanvas(0, 0);
